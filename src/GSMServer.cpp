@@ -156,6 +156,8 @@ GSMClient GSMServer::available(bool synch)
             socket = _childSockets[i].socket;
             break;
           }
+          _childSockets[i].socket = -1;
+          _childSockets[i].accepted = false;
         }
       }
     }
